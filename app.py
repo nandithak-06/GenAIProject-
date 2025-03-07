@@ -7,7 +7,7 @@ import re
 app = Flask(__name__)
 
 # Configure Gemini API securely
-genai.configure(api_key="AIzaSyAAY5-scPeGvqW8Tb3XnPd01BSoLr6TreI")  # Set this in your environment
+genai.configure(api_key="mention your api key")  # Set this in your environment
 
 # Function to extract transcript from YouTube video
 def get_youtube_transcript(video_id):
