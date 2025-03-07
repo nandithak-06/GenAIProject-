@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Content Analyzer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('/static/home.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            width: 60%;
+            max-width: 600px;
+        }
+
+        .logo {
+            width: 120px;
+            animation: float 2s infinite alternate ease-in-out;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+
+        .description {
+            font-size: 18px;
+            margin: 15px 0;
+            line-height: 1.5;
+        }
+
+        .start-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #ff0000;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 10px;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .start-btn:hover {
+            background: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" class="logo" alt="YouTube Logo">
+        <h1>YouTube Content Analyzer</h1>
+        <p class="description">
+            Analyze and summarize YouTube videos using AI. Our system extracts key insights, 
+            detects sentiment, and provides topic analysis to help researchers, students, 
+            and content creators save time.
+        </p>
+        <p class="description">
+            Built with NLP and Machine Learning, our tool delivers fast and accurate breakdowns 
+            of YouTube videos, helping you grasp the essential points without watching the entire content.
+        </p>
+        <a href="/index" class="start-btn">Start Analysis</a>
+    </div>
+</body>
+</html>

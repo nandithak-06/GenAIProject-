@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Analyzer</title>
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='images/dfv.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+            border: 2px solid yellow;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            border: 2px solid yellow;
+            border-radius: 5px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-align: center;
+        }
+        button {
+            background: yellow;
+            color: black;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            box-shadow: 2px 2px 5px gray;
+        }
+        button:hover {
+            background: orange;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Video Analyzer</h1>
+        
+        <img src="{{ url_for('static', filename='images/youtube_banner.JPG') }}" alt="YouTube Logo" width="200">
+        
+        <form action="/analyze" method="POST">
+            <input type="text" name="youtube_url" placeholder="Enter YouTube URL here..." required>
+            <button type="submit">CLICK TO ANALYZE</button>
+        </form>
+        
+        {% if error %}
+            <p class="error">❌ {{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

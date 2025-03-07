@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Result</title>
+    <style>
+        body {
+            background: url("{{ url_for('static', filename='images/img.jpg') }}") no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #FFD700; /* Gold color */
+        }
+
+        .section {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .section h2 {
+            color: #00FFFF; /* Cyan color */
+        }
+
+        .section p {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #FF4500;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #FF6347;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Video Analysis Result</h1>
+
+        <div class="section">
+            <h2>Extracted Transcript:</h2>
+            <p>{{ transcript }}</p>
+        </div>
+
+        <div class="section">
+            <h2>Summary & Analysis:</h2>
+            <p>{{ summary }}</p>
+        </div>
+
+        <a href="/" class="back-btn">Go Back</a>
+    </div>
+
+</body>
+</html>
